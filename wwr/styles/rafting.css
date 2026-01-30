@@ -91,17 +91,18 @@ article {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 16px;
+    
+
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
     width: 60%;
 }
 
 /* Article Image */
 .hero article img {
     float: right;
-    width: 125px;
+    width: 150px;
     margin-left: 12px;
-    border-radius: 4px;
 }
 
 /* Footer */

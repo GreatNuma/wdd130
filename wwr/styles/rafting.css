@@ -1,158 +1,104 @@
-/* CSS Variables */
-:root {
-    --primary-color: #0b3c49;
-    --accent1-color: #264653;
-    --accent2-color: #e9c46a;
-    --heading-font: Georgia, "Times New Roman", serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
+/* Contact Page Styles */
 
-/* CSS Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Base Styling */
-body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-    line-height: 1.5;
-}
-
-header,
-main,
-footer {
+/* Company Info */
+.company-info {
+    margin: 24px auto;
     width: 840px;
-    margin: 0 auto;
-}
-
-/* Header */
-header {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    align-items: center;
-    background-color: var(--primary-color);
     padding: 16px;
-}
-
-header img {
-    width: 120px;
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-}
-
-nav a {
-    color: var(--accent2-color);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-/* Headings */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin-bottom: 12px;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    margin-bottom: 24px;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    background-color: var(--accent1-color);
-    color: #ffffff;
-    opacity: 0.8;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem;
-    width: 60%;
-}
-
-.hero article img {
-    float: right;
-    width: 150px;
-    margin-left: 12px;
-}
-
-/* History Section */
-.history-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 24px;
-}
-
-.history-content img {
-    width: 300px;
+    background-color: #f2f2f2;
     border-radius: 8px;
 }
 
-/* Adventures Section */
-.adventure-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+.map-container {
+    margin-top: 16px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Employees */
+.employee-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     margin: 16px 0;
 }
 
-.adventure-grid img {
+.employee-grid figure {
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+}
+
+.employee-grid img {
     width: 100%;
-    height: auto;
     border-radius: 8px;
 }
 
-.adventure-grid figcaption {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 4px;
-}
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: #ffffff;
+/* Contact Form */
+.contact-form-section {
+    margin: 24px auto;
+    width: 840px;
     padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
-footer p {
-    margin: 0;
-}
-
-.socialmedia {
+.contact-form {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.socialmedia img {
-    width: 32px;
-    height: auto;
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 8px 0;
+}
+
+.contact-form fieldset label {
+    font-weight: normal;
+    margin-right: 12px;
+}
+
+.contact-form .newsletter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+.contact-form button[type="submit"] {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #d4a74b;
+    /* slightly darker accent */
 }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Get in touch with White Water Rafting Co. Find our location, contact details, meet our team, and send us a message.">
+    <meta name="author" content="GreatNuma">
+    <title>Contact Us | White Water Rafting</title>
+
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="White Water Rafting Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Company Info Section -->
+        <section class="company-info">
+            <h1>Contact Us</h1>
+            <p><strong>Address:</strong> 123 Riverbend Way, Adventure City, USA</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567 | +1 (555) 987-6543</p>
+            <p><strong>Email:</strong> info@whitewaterrafting.com</p>
+            <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086430522659!2d-122.42067968468178!3d37.77928087975896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a3c2b2b5b%3A0xa2ef7c2b8f1e6b8c!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1615241863596!5m2!1sen!2sus"
+                  allowfullscreen="" loading="lazy" title="White Water Rafting Location">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Employees Section -->
+        <section class="employees">
+            <h2>Meet Our Team</h2>
+            <div class="employee-grid">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Great Numa - Lead Guide">
+                    <figcaption>Great Numa - Lead Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Sunday Kelly - Safety Officer">
+                    <figcaption>Sunday Kelly - Safety Officer</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Adeh Sarah - Operations Manager">
+                    <figcaption>Adeh Sarah - Operations Manager</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <label>
+                        <input type="radio" name="purpose" value="general" required>
+                        General Inquiry
+                    </label>
+                    <label>
+                        <input type="radio" name="purpose" value="reservation">
+                        Reservation Question
+                    </label>
+                    <label>
+                        <input type="radio" name="purpose" value="website">
+                        Website Suggestion
+                    </label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <label class="newsletter">
+                    <input type="checkbox" name="newsletter">
+                    Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 White Water Rafting Co. | GreatNuma</p>
+        <nav class="socialmedia">
+            <a href="https://whatsapp.com">
+                <img src="images/whatsapp.svg" alt="Whatsapp Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram Icon">
+            </a>
+            <a href="http://tictok.com">
+                <img src="images/tictok-bw.svg" alt="Tictok Icon">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>

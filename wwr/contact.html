@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Get in touch with White Water Rafting Co. Find our location, contact details, meet our team, and send us a message.">
+      content="Contact White Water Rafting Co. for inquiries, reservations, and feedback. Find our location and meet our team.">
     <meta name="author" content="GreatNuma">
-    <title>Contact Us | White Water Rafting</title>
-
+    <title>Contact Us | White Water Rafting Company</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <!-- Header -->
     <header>
         <img src="images/logo.png" alt="White Water Rafting Logo">
         <nav>
@@ -24,98 +22,86 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Company Info Section -->
-        <section class="company-info">
-            <h1>Contact Us</h1>
-            <p><strong>Address:</strong> 123 Riverbend Way, Adventure City, USA</p>
-            <p><strong>Phone:</strong> +1 (555) 123-4567 | +1 (555) 987-6543</p>
-            <p><strong>Email:</strong> info@whitewaterrafting.com</p>
-            <div class="map-container">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086430522659!2d-122.42067968468178!3d37.77928087975896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a3c2b2b5b%3A0xa2ef7c2b8f1e6b8c!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1615241863596!5m2!1sen!2sus"
-                  allowfullscreen="" loading="lazy" title="White Water Rafting Location">
-                </iframe>
-            </div>
+        <section class="contact-intro">
+            <h1>White Water Rafting Company</h1>
+            <p>123 Main River Street, Kolob, California</p>
+            <p>+1 999 999 9999 | info@whitewater.com</p>
         </section>
 
-        <!-- Employees Section -->
+        <div class="map-form-wrapper">
+            <section class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3151.835434509374!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1611111111111"
+                  title="Company Location Map" allowfullscreen="" loading="lazy">
+                </iframe>
+            </section>
+
+            <section class="form-container">
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-item">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address"
+                          required>
+                    </div>
+
+                    <fieldset>
+                        <legend>Message Purpose</legend>
+                        <label><input type="radio" name="purpose" value="general" required> General
+                            Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation"> Reservation
+                            Question</label>
+                        <label><input type="radio" name="purpose" value="website"> Website
+                            Suggestion</label>
+                    </fieldset>
+
+                    <div class="form-item">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Type here"
+                          required></textarea>
+                    </div>
+
+                    <div class="newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Please subscribe me to the monthly
+                            newsletter</label>
+                    </div>
+
+                    <button type="submit">Get in Touch!</button>
+                </form>
+            </section>
+        </div>
+
         <section class="employees">
-            <h2>Meet Our Team</h2>
+            <h2>We Are Here to Serve You</h2>
             <div class="employee-grid">
                 <figure>
-                    <img src="images/employee1.jpg" alt="Great Numa - Lead Guide">
-                    <figcaption>Great Numa - Lead Guide</figcaption>
+                    <img src="images/employee1.jpg" alt="Profile of Guide 1">
+                    <figcaption>Lead Guide</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/employee2.jpg" alt="Sunday Kelly - Safety Officer">
-                    <figcaption>Sunday Kelly - Safety Officer</figcaption>
+                    <img src="images/employee2.jpg" alt="Profile of Guide 2">
+                    <figcaption>Saftey Officer</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/employee3.jpg" alt="Adeh Sarah - Operations Manager">
-                    <figcaption>Adeh Sarah - Operations Manager</figcaption>
+                    <img src="images/employee3.jpg" alt="Profile of Guide 3">
+                    <figcaption>Operations Manager</figcaption>
                 </figure>
             </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section class="contact-form-section">
-            <h2>Send Us a Message</h2>
-
-            <form action="#" method="POST" class="contact-form">
-
-                <!-- Text input -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <!-- Email input -->
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <!-- Radio buttons -->
-                <fieldset>
-                    <legend>Purpose of Message:</legend>
-
-                    <input type="radio" id="purpose-general" name="purpose" value="general"
-                      required>
-                    <label for="purpose-general">General Inquiry</label>
-
-                    <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
-                    <label for="purpose-reservation">Reservation Question</label>
-
-                    <input type="radio" id="purpose-website" name="purpose" value="website">
-                    <label for="purpose-website">Website Suggestion</label>
-                </fieldset>
-
-                <!-- Textarea -->
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <!-- Checkbox -->
-                <input type="checkbox" id="newsletter" name="newsletter">
-                <label for="newsletter">Please subscribe me to the monthly newsletter</label>
-
-                <!-- Submit button -->
-                <button type="submit">Send Message</button>
-
-            </form>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>© 2026 White Water Rafting Co. | GreatNuma</p>
         <nav class="socialmedia">
-            <a href="https://whatsapp.com">
-                <img src="images/whatsapp.svg" alt="Whatsapp Icon">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram.svg" alt="Instagram Icon">
-            </a>
-            <a href="http://tictok.com">
-                <img src="images/tictok-bw.svg" alt="Tictok Icon">
-            </a>
+            <a href="https://whatsapp.com"><img src="images/whatsapp.svg" alt="Whatsapp"></a>
+            <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram"></a>
+            <a href="https://facebok.com"><img src="images/facebook.svg" alt="Facebook"></a>
         </nav>
     </footer>
 </body>

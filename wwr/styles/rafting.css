@@ -1,126 +1,326 @@
+/* --- 1. ROOT VARIABLES (ACCESSIBILITY OPTIMIZED) --- */
 :root {
-    /* Adjusted for AA Contrast */
     --primary-color: #053a4f;
-    /* Darker blue for text contrast */
+    /* Deep River Blue */
     --secondary-color: #e2e8f0;
-    /* Light grey for section backgrounds */
-    --accent-color: #d97706;
-    /* Darker orange for white text buttons */
+    /* Mist Gray */
+    /* Darkened to #ae5d00 to pass contrast checks against white backgrounds */
+    --accent-color: #ae5d00;
+    /* Burnt Sunset Orange */
     --dark-color: #111827;
+    /* Midnight Blue */
     --light-color: #ffffff;
     --text-color: #1f2937;
+    --nav-hover: #ffcc80;
+    /* Light Peach for contrast against Dark Blue */
 }
 
-/* ... keep your global styles ... */
+/* --- 2. RESET & BASE STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/* Header & Nav */
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* --- 3. SHARED COMPONENTS (Header, Footer, Nav) --- */
 header {
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 5%;
 }
 
-/* Layout/Design matching Wireframe */
-.contact-intro {
-    text-align: center;
-    margin-bottom: 2rem;
+header img,
+.logo {
+    height: 70px;
 }
 
-.map-form-wrapper {
-    display: flex;
-    gap: 3rem;
-    margin-bottom: 4rem;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: 0.3s;
 }
 
-.map-container,
-.form-container {
-    flex: 1;
+nav a:hover,
+nav a.active {
+    color: var(--nav-hover);
+    border-bottom: 2px solid var(--nav-hover);
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-/* Form Styling */
-.form-item {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    margin-bottom: 1.5rem;
-    align-items: center;
-}
-
-fieldset {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-fieldset label {
-    display: block;
-    font-weight: normal;
-    margin-bottom: 0.5rem;
-}
-
-.newsletter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-}
-
-button {
-    width: 100%;
-    background-color: var(--accent-color);
-    font-weight: bold;
-    padding: 1rem;
-}
-
-/* Employee Section */
-.employees {
-    border: 2px solid #333;
-    /* Visual box from wireframe */
-    padding: 2rem;
-    text-align: center;
-}
-
-.employee-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.employee-grid img {
-    background-color: #ddd;
-    /* Placeholder look */
-    width: 150px;
-    margin: 0 auto;
-}
-
-/* Footer */
 footer {
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
-    padding: 2rem 5%;
+    align-items: center;
+    padding: 2.5rem 5%;
+    color: white;
+    margin-top: 4rem;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+}
+
+.socialmedia img {
+    width: 30px;
+    margin-left: 15px;
+    /* FIX: Removed 'invert' filter that turned icons into white blobs. 
+       If icons are naturally dark, use filter: invert(1); manually for those specific files. */
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.socialmedia a:hover img {
+    transform: scale(1.1);
+}
+
+/* --- 4. HERO SECTIONS --- */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero img,
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(5, 58, 79, 0.85);
+    /* Dark blue with 85% opacity for text readability */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* --- 5. GRID & LAYOUTS --- */
+.home-grid,
+.map-form-wrapper,
+.adventure-grid,
+.employee-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.home-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.adventure-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.employee-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-card img,
+.history img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.history-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* --- 6. FORMS & BUTTONS --- */
+.newsletter-box {
+    background: var(--secondary-color);
+    padding: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.news-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #767676;
+    /* Darker border for WCAG 2.1 accessibility */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+button,
+.cta-link,
+.cta-btn {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+button:hover,
+.cta-link:hover {
+    background: var(--dark-color);
     color: white;
 }
 
-/* Responsiveness */
-@media (max-width: 800px) {
-    .map-form-wrapper {
-        flex-direction: column;
-    }
+.accent-text {
+    color: var(--accent-color);
+    font-weight: bold;
+}
 
-    .employee-grid {
+/* --- 7. TABLES --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+th {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.2rem;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+    /* Zebra striping for readability */
+}
+
+/* --- 8. TRIP & EMPLOYEE DETAILS --- */
+.trip-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.trip-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.trip-item img {
+    width: 45%;
+    border-radius: 8px;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.employee-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+}
+
+/* --- 9. RESPONSIVENESS --- */
+@media (max-width: 800px) {
+
+    .home-grid,
+    .map-form-wrapper,
+    .employee-grid,
+    .trip-item,
+    .trip-item.reverse,
+    .news-form,
+    .history-content {
         grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .form-item {
         grid-template-columns: 1fr;
+    }
+
+    .trip-item img {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 0.5rem;
+    }
+
+    nav a {
+        margin: 0 5px;
     }
 }
